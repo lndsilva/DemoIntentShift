@@ -32,23 +32,23 @@
             android:id="@+id/tvHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="20sp"
             android:layout_marginTop="5dp"
-            android:textStyle="bold"
             android:layout_weight="0.5"
-            android:text="HOME" />
+            android:gravity="center"
+            android:text="HOME"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvVisitante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:textSize="20sp"
             android:layout_marginTop="5dp"
-            android:textStyle="bold"
+            android:layout_weight="0.5"
             android:gravity="center"
-            android:text="VISITANTE" />
+            android:text="VISITANTE"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,23 +60,23 @@
             android:id="@+id/tvPlacaHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="10dp"
             android:layout_weight="0.5"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:text="0"
             android:textSize="23sp"
-            android:text="0" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvPlacaVisitante"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:textSize="23sp"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
+            android:layout_weight="0.5"
             android:gravity="center"
-            android:text="0" />
+            android:text="0"
+            android:textSize="23sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,9 +90,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="0.5"
-            android:textSize="21sp"
+            android:onClick="golCasa"
             android:text="GOL"
-            android:onClick="golCasa"/>
+            android:textSize="21sp" />
 
         <Button
             android:id="@+id/btGolVisitante"
@@ -100,9 +100,58 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:gravity="center"
-            android:textSize="21sp"
+            android:onClick="programarAlarme"
             android:text="GOL"
-            android:onClick="golVisitante"/>
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tvTempoJogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tempo do jogo em segundos" />
+
+        <Button
+            android:id="@+id/btDispara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="programarAlarme"
+            android:text="Programar Alarme"
+            android:textSize="21sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTimeStampText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+        <Button
+            android:id="@+id/btLigarAlarme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ligar alarme"
+            android:textSize="21sp" />
+        <Button
+            android:id="@+id/btDesligaAlarme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Desliga alarme"
+            android:textSize="21sp" />
+
     </LinearLayout>
 
 
