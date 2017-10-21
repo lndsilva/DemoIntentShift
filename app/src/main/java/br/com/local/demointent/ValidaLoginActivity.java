@@ -19,7 +19,7 @@ public class ValidaLoginActivity extends AppCompatActivity {
 
         if (getIntent() != null) {
             String login = getIntent().getStringExtra(Constantes.KEY_LOGIN);
-            String senha = getIntent().getStringExtra(Constantes.KEY_LOGIN);
+            String senha = getIntent().getStringExtra(Constantes.KEY_SENHA);
 
             validaLogin(login, senha);
         }

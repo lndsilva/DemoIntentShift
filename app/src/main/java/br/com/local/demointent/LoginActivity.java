@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         etLogin = (EditText) findViewById(R.id.etLogin);
-        etLogin = (EditText) findViewById(R.id.etSenha);
+        etSenha = (EditText) findViewById(R.id.etSenha);
     }
 
     public void conectar(View view) {
@@ -40,13 +40,18 @@ public class LoginActivity extends AppCompatActivity {
 
         switch (requestCode) {
             case Constantes.REQUEST_CODE_VALIDA_LOGIN:
-                switch (requestCode) {
+                switch (resultCode) {
                     case RESULT_OK:
                         boolean isLoginValido = data.getBooleanExtra(Constantes.KEY_RESULT_LOGIN, false);
-                        if(isLoginValido){
-                            Toast.makeText(this, "Login valido",Toast.LENGTH_SHORT).show();
-                        }else {
-                            Toast.makeText(this, "Login invalido",Toast.LENGTH_SHORT).show();
+                        if (isLoginValido) {
+                            Intent i = new Intent(this, MainActivity.class);
+                            i.putExtra(Constantes.KEY_LOGIN, etLogin.getText().toString());
+                            startActivity(i);
+                            finish();
+
+                            Toast.makeText(this, "Login valido", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(this, "Login invalido", Toast.LENGTH_SHORT).show();
                         }
                         break;
 
