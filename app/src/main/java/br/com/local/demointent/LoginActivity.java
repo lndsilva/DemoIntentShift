@@ -61,4 +61,10 @@ public class LoginActivity extends AppCompatActivity {
                 break;
         }
     }
+
+    public void testeBroadcast(View v) {
+        Intent i = new Intent();
+        i.setAction("android.app.action.LOGIN_SUCESSO");
+        sendBroadcast(i);
+    }
 }
